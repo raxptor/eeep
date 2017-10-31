@@ -1,0 +1,3 @@
+[submodule "ext/putki"]
+	path = ext/putki
+	url = git@github.com:raxptor/putki.git
