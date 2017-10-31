@@ -6,4 +6,5 @@
 	Version: "1.0"
 	Campaigns: [campaign/tutorial, campaign/main]
 	Test: [weapons/knife]
+	StartMap: dan-special-map
 }

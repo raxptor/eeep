@@ -19,9 +19,8 @@ namespace Game
 			string[] files = Directory.GetFiles(path, "*.txt", SearchOption.AllDirectories);
 			foreach (string fn in files)
 			{
-				Eeep.ParseStatus ps = new Eeep.ParseStatus();
 				Dictionary<string, object> res = Eeep.Parse(File.ReadAllBytes(fn));
-				if (!ps.error && res != null)
+				if (res != null)
 				{
 					foreach (var kv in res)
 					{

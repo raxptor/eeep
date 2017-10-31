@@ -4,6 +4,7 @@ GameConfiguration
 {
 	string Title
 	string Version
+	ptr Map StartMap
 	ptr[] Campaign Campaigns
 	ptr[] Item Test
 }
@@ -18,13 +19,41 @@ enum CampaignType
 Campaign
 {
 	string Name
-	ptr[] CampaignMap Maps
+	ptr[] Map Maps
 	enum CampaignType Type = CAMPAIGN_MAIN
 }
 
-CampaignMap
+Dialogue rtti no-asset
 {
-	int[] X
-	int[] Y
-	bool IsTutorial
+
+}
+
+ZoneEvent rtti no-asset 
+{
+
+}
+
+ZonePlayCutscene : ZoneEvent
+{
+
+}
+
+ZoneFight : ZoneEvent
+{
+	string DebugName
+}
+
+Zone rtti
+{
+	auxptr[] ZoneEvent Events
+}
+
+LinkZone : Zone
+{
+	ptr Map TargetMap
+}
+
+Map
+{	
+	auxptr[] Zone Zones
 }

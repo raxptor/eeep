@@ -1,0 +1,27 @@
+@Map vacuum
+{
+
+}
+
+@Map dan-special-map
+{
+	Zones: [
+		@LinkZone { TargetMap=vacuum }
+		@Zone { Events: [ @ZonePlayCutscene { } ] } 
+
+		# a zone with some fights
+		@Zone { 
+			Events: [
+				zonefights/big-fight1
+				@ZoneFight {
+					DebugName: "Inline fight2"
+				}
+			]
+		}
+	]
+}
+
+@ZoneFight zonefights/big-fight1 
+{ 
+	DebugName = "Big fight 1"	
+}
