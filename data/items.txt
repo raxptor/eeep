@@ -1,0 +1,18 @@
+# Some items
+
+@Item items/generic  {
+	Name: "Generic Item"
+	Icon: "item"
+}
+
+@Weapon weapons/knife {
+	Name: "Knife"
+	Icon: "knife"
+	Description: "This is the best knife you will ever find. And it does so better than anything else."
+	Attack: 10
+	Effects: [
+		@EffectDot { Amount: 100 }
+		@EffectNothing { }
+		@EffectDot { Amount: 123 }
+	]
+}

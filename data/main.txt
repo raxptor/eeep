@@ -1,0 +1,9 @@
+################################
+# Main game configuration file. 
+
+@GameConfiguration game {
+	Title: "Guardians of the Dungeon of Doom"
+	Version: "1.0"
+	Campaigns: [campaign/tutorial, campaign/main]
+	Test: [weapons/knife]
+}

@@ -1,0 +1,27 @@
+IEffect rtti no-inst
+{
+
+}
+
+EffectDot : IEffect
+{
+	int Amount = 20
+}
+
+EffectNothing : IEffect
+{
+
+}
+
+Item rtti
+{
+	string Name = ""
+	string Description = ""
+	string Icon = ""
+	auxptr[] IEffect Effects
+}
+
+Weapon : Item
+{
+	int Attack
+}

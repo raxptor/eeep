@@ -1,0 +1,30 @@
+%include item.typedef
+
+GameConfiguration
+{
+	string Title
+	string Version
+	ptr[] Campaign Campaigns
+	ptr[] Item Test
+}
+
+enum CampaignType
+{
+	CAMPAIGN_TUTORIAL
+	CAMPAIGN_MAIN
+	CAMPAIGN_DLC
+}
+
+Campaign
+{
+	string Name
+	ptr[] CampaignMap Maps
+	enum CampaignType Type = CAMPAIGN_MAIN
+}
+
+CampaignMap
+{
+	int[] X
+	int[] Y
+	bool IsTutorial
+}

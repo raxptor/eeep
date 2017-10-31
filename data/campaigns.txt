@@ -1,0 +1,24 @@
+###########################################
+# Tutorial                                #
+###########################################
+
+@Campaign campaign/tutorial {
+	Name: "This is our tutorial for the game"
+	Type: CAMPAIGN_TUTORIAL
+	Maps: []
+}
+
+@CampaignMap maps/tut-main {
+	X: [111, 222, 333]
+	Y: [444, 555]
+}
+
+###########################################
+# Main                                    #
+###########################################
+
+@Campaign campaign/main
+{
+	Name: "Main campaign"
+	Maps: [maps/tut-main]
+}
